@@ -1,2 +1,2 @@
 # Muziky
-A Music Player for the Web
+Reponsive Web Music Player 
