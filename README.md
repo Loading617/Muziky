@@ -1,2 +1,2 @@
 # Muziky
-Reponsive Web Music Player 
+Web Music Library 
