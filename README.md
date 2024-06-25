@@ -3,4 +3,4 @@
 </p>
 
 # Muziky
-Web Music Library 
+Music Library for the Web 
