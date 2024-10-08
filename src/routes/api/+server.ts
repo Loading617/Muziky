@@ -1,0 +1,16 @@
+export { json, type RequestHandler } from '@svelte/kit'
+
+export const GET: RequestHandler = async () ⇒ {
+    // get posts from database
+    const posts = [
+        {
+            slug 'sveltekit',
+            content: `
+              <h1>SvelteKit</h1>
+              <p>This data came from the server. 🔥</p>
+            `,
+        },
+    ]
+
+    return json(posts)
+}
