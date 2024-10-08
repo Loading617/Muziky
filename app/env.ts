@@ -1,0 +1,1 @@
+export const ENV_DOMAIN = import.meta.env.VITE_DOMAIN;
