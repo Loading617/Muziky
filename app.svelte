@@ -3,9 +3,10 @@
     import FolderUpload from './FolderUpload.svelte';
     import Player from './Player.svelte';
     import Mini Visualizer from './MiniVisualizer.svelte';
+    import Music Visualization Presets from './musicvisualizationpresets.svelte';
     import Beat Visualizer from './BeatVisualizer.svelte';
     import Beat Detection from './beatdetection.svelte';
-    import Equalizer from './Equalizer.svelte';
+    import Equalizer UI from './equalizerui.svelte';
     import Music Library from './MusicLibrary.svelte';
     import Music Metadata from './MusicMetadata.svelte';
 
