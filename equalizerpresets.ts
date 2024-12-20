@@ -11,11 +11,12 @@ const equalizerPresets = {
     Hard: [2, 2, -2, 2, 2],
     TrebleBoost: [4, 2, 0, -2, 4],
     MidBoost: [2, 4, 0, -2, 2],
-    Stereo: [0, 0, 0, 0, 0],
-    Mono: [0, 0, 0, 0, 0],
     SubBass: [1, 1, 1, 1, 1],
     BassBoost: [5, 3, 0, -2, -4],
+    TrebleCut: [-4, -2, 0, 2, 4],
+    MidCut: [-2, -2, 0, 2, 2],
+    SubBassCut: [-1, -1, -1, -1, -1],
+    BassCut: [-5, -3, 0, -2, -4]
   };
   
   const frequencies = [60, 170, 350, 1000, 3500]; // Example frequency bands
-  
