@@ -212,49 +212,64 @@ header .master_play .wave{
     margin-right: 10px;    
 }
 
-    .now-playing {
-      font-family: Arial, sans-serif;
-      margin-top: 1rem;
-    }
-    .now-playing h3 {
-      margin: 0.5rem 0;
-    }
-    .audio-player {
-      margin-top: 1rem;
-    }
-
 .library {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 1rem auto;
-    }
-  
-    .track {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  
-    .track:hover {
-      background-color: #f0f0f0;
-    }
-  
-    .track img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-right: 1rem;
-    }
-  
-    audio {
-      width: 100%;
-      margin-top: 1rem;
-    }
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+
+  .track {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .track:hover {
+    background-color: #f0f0f0;
+  }
+
+  .track img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+
+  .now-playing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .visualizer {
+    width: 200px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  audio {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+.now-playing {
+    font-family: Helvetica, sans-serif;
+    margin-top: 1rem;
+  }
+  .now-playing h3 {
+    margin: 0.5rem 0;
+  }
+  .audio-player {
+    margin-top: 1rem;
+  }
 
 canvas {
     background: #000;
@@ -270,4 +285,4 @@ canvas {
     height: 50px;
     border-radius: 50%;
     transition: background-color 0.1s ease;
-  }  
+  }
