@@ -4,6 +4,7 @@
     import Player from './Player.svelte';
     import Mini Visualizer from './MiniVisualizer.svelte';
     import Beat Visualizer from './BeatVisualizer.svelte';
+    import Beat Detection from './beatdetection.svelte';
     import Equalizer from './Equalizer.svelte';
     import Music Library from './MusicLibrary.svelte';
     import Music Metadata from './MusicMetadata.svelte';
