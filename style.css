@@ -212,6 +212,17 @@ header .master_play .wave{
     margin-right: 10px;    
 }
 
+    .now-playing {
+      font-family: Arial, sans-serif;
+      margin-top: 1rem;
+    }
+    .now-playing h3 {
+      margin: 0.5rem 0;
+    }
+    .audio-player {
+      margin-top: 1rem;
+    }
+
 canvas {
     background: #000;
     display: block;
