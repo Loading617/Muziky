@@ -223,6 +223,39 @@ header .master_play .wave{
       margin-top: 1rem;
     }
 
+.library {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+  
+    .track {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  
+    .track:hover {
+      background-color: #f0f0f0;
+    }
+  
+    .track img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 1rem;
+    }
+  
+    audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
 canvas {
     background: #000;
     display: block;
