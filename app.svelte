@@ -1,8 +1,10 @@
 <script lang="ts">
-    import FileUpload from './FileUpload.svelte';
+import FileUpload from './FileUpload.svelte';
     import Player from './Player.svelte';
     import Beat Visualizer from './BeatVisualizer.svelte';
     import Equalizer from './Equalizer.svelte';
+    import Music Library from './MusicLibrary.svelte';
+    import Music Metadata from './MusicMetadata.svelte';
   
     let selectedFile: File | null = null;
     let audioElement: HTMLAudioElement | null = null;
