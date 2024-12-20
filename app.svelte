@@ -2,6 +2,7 @@
     import FileUpload from './FileUpload.svelte';
     import FolderUpload from './FolderUpload.svelte';
     import Player from './Player.svelte';
+    import Mini Visualizer from './MiniVisualizer.svelte';
     import Beat Visualizer from './BeatVisualizer.svelte';
     import Equalizer from './Equalizer.svelte';
     import Music Library from './MusicLibrary.svelte';
@@ -24,6 +25,7 @@
     <Player bind:file={selectedFile} bind:audio={audioElement} />
     {#if audioElement}
       <BeatVisualizer {audioElement} />
+      <MiniVisualizer {audioElement} />
       <Equalizer {audioElement} />
     {/if}
   </main>
