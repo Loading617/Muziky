@@ -1,7 +1,7 @@
 <script lang="ts">
     import FileUpload from './FileUpload.svelte';
     import Player from './Player.svelte';
-    import Visualizer from './BeatVisualizer.svelte';
+    import Beat Visualizer from './BeatVisualizer.svelte';
     import Equalizer from './Equalizer.svelte';
   
     let selectedFile: File | null = null;
