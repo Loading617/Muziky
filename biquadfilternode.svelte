@@ -6,15 +6,13 @@
     let audioContext: AudioContext;
     let sourceNode: MediaElementAudioSourceNode;
     let filters: BiquadFilterNode[] = [];
-    const selectedProfile = writable('Flat'); // Default profile
+    const selectedProfile = writable('Flat');
     let customProfile: number[] = [0, 0, 0, 0, 0, 0];
   
-    // Initialize the equalizer filters
     function setupEqualizer() {
       audioContext = new AudioContext();
       sourceNode = audioContext.createMediaElementSource(audioElement);
   
-      // Create filters for each frequency
       frequencies.forEach((frequency) => {
         const filter = audioContext.createBiquadFilter();
         filter.type = 'peaking';
@@ -23,13 +21,11 @@
         filters.push(filter);
       });
   
-      // Connect the filters in sequence
       filters.reduce((prev, curr) => prev.connect(curr), sourceNode).connect(audioContext.destination);
   
-      applyProfile('Flat'); // Apply default profile
+      applyProfile('Flat');
     }
   
-    // Apply a preset or custom profile
     function applyProfile(profile: string | number[]) {
       const gains = typeof profile === 'string' ? equalizerProfiles[profile] : profile;
   
