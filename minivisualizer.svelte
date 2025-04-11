@@ -23,15 +23,13 @@
       const source = audioContext.createMediaElementSource(audioElement);
       analyser = audioContext.createAnalyser();
   
-      // Connect audio element to analyser and destination
       source.connect(analyser);
       analyser.connect(audioContext.destination);
   
-      analyser.fftSize = 64; // Number of frequency bins
+      analyser.fftSize = 64;
       const bufferLength = analyser.frequencyBinCount;
       dataArray = new Uint8Array(bufferLength);
   
-      // Start visualizer rendering
       renderVisualizer();
     }
   
