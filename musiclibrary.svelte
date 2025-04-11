@@ -2,9 +2,8 @@
     import { parseBlob } from 'music-metadata-browser';
     import { writable } from 'svelte/store';
   
-    // Define track model
     interface Track {
-      id: string; // Unique ID
+      id: string;
       title: string;
       artist: string;
       album: string;
@@ -14,10 +13,8 @@
       url: string;
     }
   
-    // Reactive store for the music library
     const musicLibrary = writable<Track[]>([]);
   
-    // Load library from localStorage on startup
     function loadLibrary() {
       const storedLibrary = localStorage.getItem('musicLibrary');
       if (storedLibrary) {
@@ -25,14 +22,12 @@
       }
     }
   
-    // Save library to localStorage
     musicLibrary.subscribe((library) => {
       localStorage.setItem('musicLibrary', JSON.stringify(library));
     });
   
-    loadLibrary(); // Load library on initialization
+    loadLibrary();
   
-    // Add tracks to the library
     async function addToLibrary(files: FileList) {
       for (const file of Array.from(files)) {
         if (!file.name.match(/\.(mp3|wav|ogg)$/i)) continue; // Only accept audio files
@@ -65,7 +60,6 @@
             url,
           };
   
-          // Update library
           musicLibrary.update((library) => [...library, newTrack]);
         };
       }
