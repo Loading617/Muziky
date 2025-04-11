@@ -12,11 +12,10 @@
   onMount(() => {
     if (!audio) return;
 
-    // Initialize Web Audio API
     context = new AudioContext();
     const source = context.createMediaElementSource(audio);
     const analyser = context.createAnalyser();
-    analyser.fftSize = 256; // Higher FFT size provides better accuracy but increases computation.
+    analyser.fftSize = 256;
 
     source.connect(analyser);
     analyser.connect(context.destination);
@@ -26,26 +25,24 @@
 
     // Variables for beat detection
     let lastPeak = 0;
-    const sensitivity = 1.2; // Adjust for sensitivity to beats
+    const sensitivity = 1.2;
 
     function detectBeat(energy: number) {
       const now = performance.now();
-      if (energy > sensitivity && now - lastPeak > 300) { // Allow beats only 300ms apart
+      if (energy > sensitivity && now - lastPeak > 300) {
         lastPeak = now;
         beatDetected = true;
 
-        setTimeout(() => (beatDetected = false), 150); // Flash beat indicator
+        setTimeout(() => (beatDetected = false), 150);
       }
     }
 
     function drawVisualizer() {
       analyser.getByteFrequencyData(dataArray);
 
-      // Compute average energy
       const averageEnergy = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
       detectBeat(averageEnergy);
 
-      // Draw visualizer
       canvasContext.clearRect(0, 0, canvas.width, canvas.height);
       const barWidth = canvas.width / dataArray.length;
 
