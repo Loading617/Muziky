@@ -16,17 +16,14 @@
   
     async function handleFolderSelection() {
       try {
-        // Request a folder handle
         const folderHandle = await (window as any).showDirectoryPicker();
         const newTracks: Track[] = [];
   
-        // Iterate over files in the folder
         for await (const [name, handle] of folderHandle.entries()) {
           if (handle.kind === 'file' && handle.name.match(/\.(mp3|wav|ogg)$/i)) {
             const file = await handle.getFile();
             const url = URL.createObjectURL(file);
   
-            // Extract metadata
             const metadata = await parseBlob(file);
             const title = metadata.common.title || file.name;
             const artist = metadata.common.artist || 'Unknown Artist';
@@ -43,7 +40,6 @@
           }
         }
   
-        // Update playlist
         tracks = newTracks;
       } catch (error) {
         console.error('Error reading folder:', error);
